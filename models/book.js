@@ -1,15 +1,15 @@
 const mongoose = require("mongoose");
 
+require('../config/dbconnection');
+
 const userSchema = new mongoose.Schema ({
-    fname : {
+    firstname : {
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
-    lname : {
+    lastname : {
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
     phone : {
         type: String,
@@ -21,34 +21,24 @@ const userSchema = new mongoose.Schema ({
         required: true,
         unique: true
     },
-    password : {
-        type: String,
-        required: true,
-        unique: true
-    },
     dob : {
-        type: String,
-        required: true,
-        unique: true
+        type: String
     },
     city : {
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
-    state : {
+    State : {
+        type: String,
+        required: true,
+    },
+    Adhar : {
         type: String,
         required: true,
         unique: true
-    },
-    pin : {
-        type: String,
-        required: true,
-        unique: true
-    },
-    googleId : String
+    }
 });
 
-const db = mongoose.model('db', userSchema);
+const User = mongoose.model("User", userSchema);
 
-mongoose.model.exports = db;
+module.exports = User;
