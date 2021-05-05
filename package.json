@@ -16,6 +16,16 @@
     "express": "^4.17.1",
     "mongodb": "^3.6.6",
     "mongoose": "^5.12.5",
+    "morgan": "^1.10.0",
     "path": "^0.12.7"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bookmydose/bookmydose-demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bookmydose/bookmydose-demo/issues"
+  },
+  "homepage": "https://github.com/bookmydose/bookmydose-demo#readme"
 }

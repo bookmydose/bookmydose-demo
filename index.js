@@ -1,11 +1,15 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const morgan = require('morgan');
 const mongodb = require("mongodb");
 const mongoose = require("mongoose");
 const cors = require('cors');
 
+const port = 5000;
+
 const app = express();
 
+app.use(morgan('dev'));
 app.use(express.static(__dirname + '/public'));
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
@@ -62,8 +66,8 @@ app.use('/hospital',HospitalRouter);
 const HospitalRegisterRouter = require('./Routes/HospitalRegisterRouter');
 app.use('/hospital-registration',HospitalRegisterRouter);
 
-app.listen(5000, function() {
-    console.log("Server started on port 5000");
+app.listen(port, function() {
+    console.log(`Server is running at Port ${port}`);
 }); 
 
 // "C:\Program Files\MongoDB\Server\4.4\bin\mongod.exe" --dbpath="c:\data\db"
