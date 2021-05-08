@@ -1,20 +1,19 @@
 {
-  "name": "service1-main",
-  "version": "1.0.0",
-  "description": "Book My Dose",
-  "main": "index.js",
+  "name": "bookmydoseserver",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index"
+    "start": "node ./bin/www"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "ejs": "^3.1.6",
-    "express": "^4.17.1",
+    "assert": "^2.0.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
     "mongodb": "^3.6.6",
-    "mongoose": "^5.12.5",
-    "path": "^0.12.7"
+    "mongoose": "^5.12.7",
+    "morgan": "~1.9.1"
   }
 }

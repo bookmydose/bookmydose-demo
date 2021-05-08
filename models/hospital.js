@@ -16,6 +16,9 @@ const hospitalSchema = new mongoose.Schema ({
         type: String,
         required: true
     }
+},
+{
+    timestamps : true
 });
 
 let Hospital = conn.hospitalDB.model('Hospital', hospitalSchema);

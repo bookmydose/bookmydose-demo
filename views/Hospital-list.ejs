@@ -34,16 +34,16 @@
                 <%  var x = 1; hospitals.forEach(function(hospital) { %>
                     <tr>
                        <th scope="row"><%= x %></th>
-                           <td> <%= hospital.name %> </td>
-                           <td> <%= hospital.phone %> </td>
-                           <td> <%= hospital.address %> </td>
+                           <td> <%= hospital.hospitalname %> </td>
+                           <td> <%= hospital.hospitaladdress %> </td>
+                           <td> <%= hospital.hospitalphone %> </td>
                       </tr>
                 <%  x++ }); %>
             </tbody>
         </table>
     </div>
     <div>
-        <a href="Admin-login.html" class="btn appointment-btn scrollto">Back</a>
+        <a href="/login" class="btn appointment-btn scrollto">Back</a>
     </div>
 </div>
 
